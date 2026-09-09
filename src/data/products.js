@@ -1,0 +1,67 @@
+export const products = [
+  {
+    id: 'tradicional',
+    tag: 'La original',
+    name: 'Montecarlos Tradicional',
+    description:
+      'Con palo y estacionada doce meses en nuestros galpones de madera. La que tomaron los fundadores de la cooperativa y la que sigue marcando el sabor de la casa: amarga, con cuerpo y de aroma persistente.',
+    intensidad: 5,
+    secado: 'Barbacuá mixto',
+    idealPara: 'Mate cebado, cimarrón',
+    origen: 'Montecarlo, Misiones',
+    accent: '#c9a227',
+    art: 'paquete',
+  },
+  {
+    id: 'suave',
+    tag: 'Para empezar el día',
+    name: 'Montecarlos Suave',
+    description:
+      'Despalada y con un estacionamiento más breve, pensada para quienes se inician en el mate o prefieren una infusión menos amarga sin perder el verdor característico de la hoja recién molida.',
+    intensidad: 2,
+    secado: 'Secado a cinta',
+    idealPara: 'Primeros mates, oficina',
+    origen: 'Montecarlo, Misiones',
+    accent: '#7c8b5c',
+    art: 'hoja',
+  },
+  {
+    id: 'compuesta',
+    tag: 'Con hierbas serranas',
+    name: 'Montecarlos Compuesta',
+    description:
+      'Yerba despalada mezclada con peperina, menta y boldo cultivados por productores vecinos de la cooperativa. Una infusión digestiva y fresca, ideal para las tardes largas de verano.',
+    intensidad: 3,
+    secado: 'Secado a cinta',
+    idealPara: 'Tereré, sobremesa',
+    origen: 'Montecarlo, Misiones',
+    accent: '#a06a3c',
+    art: 'cebado',
+  },
+  {
+    id: 'barbacua',
+    tag: 'Edición limitada',
+    name: 'Montecarlos Barbacuá',
+    description:
+      'Secada al fuego de leña sobre varas de madera, como se hacía antes de que llegaran las cintas industriales. Un sabor ahumado e intenso que se agota apenas empieza la zafra.',
+    intensidad: 5,
+    secado: 'Barbacuá tradicional a leña',
+    idealPara: 'Mateadas largas, regalo',
+    origen: 'Paraje Piray, Misiones',
+    accent: '#e2c467',
+    art: 'humo',
+  },
+  {
+    id: 'organica',
+    tag: 'Cultivo agroecológico',
+    name: 'Montecarlos Orgánica',
+    description:
+      'Cultivada sin agroquímicos por ocho familias asociadas certificadas, bajo sombra de especies nativas del monte. Sabor limpio y suave, con certificación para exportación.',
+    intensidad: 3,
+    secado: 'Secado a cinta',
+    idealPara: 'Mate dulce, consumo diario',
+    origen: 'Colonia Delicia, Misiones',
+    accent: '#8fae5a',
+    art: 'monte',
+  },
+]
