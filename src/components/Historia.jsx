@@ -2,24 +2,24 @@ import Reveal from './Reveal.jsx'
 
 const HITOS = [
   {
-    year: '1958',
-    text: 'Doce familias productoras de Montecarlo se asocian para dejar de venderle la hoja verde a los secaderos de terceros y fundan la cooperativa.',
+    year: '1926',
+    text: 'En la colonia de Montecarlo, poblada mayormente por inmigrantes alemanes dedicados al maíz, el tabaco y la mandioca, comienza el cultivo de yerba mate.',
   },
   {
-    year: '1975',
-    text: 'Se inaugura el primer secadero propio, con barbacuá a leña, permitiendo estacionar y envasar la yerba con marca propia por primera vez.',
+    year: '24 jul. 1930',
+    text: 'Cansados de los abusos de los intermediarios, 72 agricultores se asocian y fundan la Cooperativa Agrícola Mixta de Montecarlo Limitada.',
   },
   {
-    year: '1998',
-    text: 'Montecarlos empieza a distribuir en Corrientes, Chaco y Santa Fe, sumando nuevas familias asociadas de parajes vecinos.',
+    year: 'Primeros años',
+    text: 'La cooperativa prioriza construir un almacén de ramos generales y, luego, su propio secadero de yerba mate.',
   },
   {
-    year: '2016',
-    text: 'Ocho productores certifican manejo agroecológico bajo monte nativo, dando origen a la línea Orgánica.',
+    year: 'Décadas siguientes',
+    text: 'Nacen las marcas Aguantadora y Sinceridad, hoy las líneas de yerba más reconocidas de la cooperativa, junto con la fabricación de fécula de mandioca.',
   },
   {
     year: 'Hoy',
-    text: 'Más de sesenta familias sostienen la cooperativa, que sigue decidiendo en asamblea qué se cultiva, cómo se seca y a quién se le vende.',
+    text: 'Más de 500 socios sostienen la cooperativa, que elabora yerba mate y fécula de mandioca bajo los mismos principios de asociativismo de sus fundadores.',
   },
 ]
 
@@ -29,20 +29,20 @@ export default function Historia() {
       <div className="container">
         <Reveal className="section-head">
           <span className="eyebrow">Nuestra historia</span>
-          <h2>Sesenta años decidiendo en asamblea</h2>
+          <h2>Casi un siglo de asociativismo</h2>
         </Reveal>
 
         <div className="historia-grid">
           <Reveal className="historia-intro">
             <p>
-              Montecarlo está en el corazón de la Selva Paranaense, en Misiones. Ahí el monte y
-              el yerbal conviven desde siempre, y ahí nacimos como cooperativa en un momento en
-              que los pequeños productores no tenían forma de poner precio a su propia cosecha.
+              Montecarlo, Misiones, fue colonizada a principios del siglo XX por inmigrantes en
+              su mayoría alemanes que llegaron en busca de tierras para cultivar. El río Paraná
+              era entonces la única vía para transportar lo que producían.
             </p>
             <p>
-              Seguimos siendo eso: una organización de productores, no una empresa que les
-              compra. Cada decisión sobre el secado, el estacionamiento y el envasado se toma
-              en asamblea, con la misma lógica de siempre.
+              Ante la dificultad creciente para comercializar sus cosechas y los abusos de los
+              intermediarios, un grupo de agricultores decidió hermanarse bajo los principios
+              cooperativos. Esa decisión sigue guiando a la cooperativa hoy.
             </p>
           </Reveal>
 

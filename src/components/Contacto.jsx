@@ -32,8 +32,8 @@ export default function Contacto() {
                   <circle cx="12" cy="10" r="2.4" stroke="currentColor" strokeWidth="1.6" />
                 </svg>
                 <div>
-                  <strong>Ruta 12, km 1489</strong>
-                  <span>Montecarlo, Misiones, Argentina</span>
+                  <strong>Av. Libertador Gral. San Martín 2713</strong>
+                  <span>Piray Km 19, Montecarlo, Misiones (CP N3384AMB)</span>
                 </div>
               </li>
               <li>
@@ -42,7 +42,7 @@ export default function Contacto() {
                   <path d="M4 7l8 6 8-6" stroke="currentColor" strokeWidth="1.6" />
                 </svg>
                 <div>
-                  <strong>contacto@montecarlos.coop</strong>
+                  <strong>info@montecarlo.com.ar</strong>
                   <span>Pedidos y consultas generales</span>
                 </div>
               </li>
@@ -55,8 +55,8 @@ export default function Contacto() {
                   />
                 </svg>
                 <div>
-                  <strong>+54 3751 42-0000</strong>
-                  <span>Lunes a viernes, 8 a 16 h</span>
+                  <strong>03751 480-053</strong>
+                  <span>Lunes a viernes, horario comercial</span>
                 </div>
               </li>
             </ul>

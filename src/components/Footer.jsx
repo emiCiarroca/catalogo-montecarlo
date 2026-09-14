@@ -18,8 +18,8 @@ export default function Footer() {
               </span>
             </a>
             <p>
-              Cooperativa de productores yerbateros de Montecarlo, Misiones. Cultivamos,
-              secamos y envasamos nuestra propia yerba desde 1958.
+              Cooperativa Agrícola Mixta de Montecarlo Limitada, fundada el 24 de julio de 1930.
+              Elaboramos yerba mate y fécula de mandioca junto a más de 500 socios.
             </p>
           </div>
 
@@ -46,16 +46,16 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Contacto</h4>
             <ul>
-              <li><span>Ruta 12, km 1489</span></li>
-              <li><span>Montecarlo, Misiones</span></li>
-              <li><a href="mailto:contacto@montecarlos.coop">contacto@montecarlos.coop</a></li>
-              <li><span>+54 3751 42-0000</span></li>
+              <li><span>Av. Libertador Gral. San Martín 2713</span></li>
+              <li><span>Piray Km 19, Montecarlo, Misiones</span></li>
+              <li><a href="mailto:info@montecarlo.com.ar">info@montecarlo.com.ar</a></li>
+              <li><span>03751 480-053</span></li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <span>© {year} Cooperativa Montecarlos. Todos los derechos reservados.</span>
+          <span>© {year} Cooperativa Agrícola Mixta de Montecarlo Limitada. Todos los derechos reservados.</span>
           <span>Hecho por y para los productores asociados.</span>
         </div>
       </div>

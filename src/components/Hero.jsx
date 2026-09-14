@@ -1,3 +1,38 @@
+import { useState } from 'react'
+
+const HERO_EXTENSIONS = ['png', 'jpg', 'jpeg']
+
+function HeroImage({ base, alt }) {
+  const [attempt, setAttempt] = useState(0)
+  const failed = attempt >= HERO_EXTENSIONS.length
+
+  if (failed) {
+    return (
+      <div className="hero-frame">
+        <div className="img-placeholder">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="4" width="18" height="15" rx="2" stroke="currentColor" strokeWidth="1.5" />
+            <circle cx="8.5" cy="9.5" r="1.5" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M3 16l5-4 4 3 4-5 5 6" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+          </svg>
+          <span>Falta agregar la foto</span>
+          <code>{base}.png</code>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="hero-frame">
+      <img
+        src={`${base}.${HERO_EXTENSIONS[attempt]}`}
+        alt={alt}
+        onError={() => setAttempt((a) => a + 1)}
+      />
+    </div>
+  )
+}
+
 export default function Hero() {
   return (
     <section id="top" className="hero">
@@ -8,9 +43,9 @@ export default function Hero() {
             La yerba se cultiva bajo <em>monte</em>, no en depósito.
           </h1>
           <p className="hero-lede">
-            Montecarlo nació de la unión de productores familiares que se negaron a vender su
-            cosecha a granel. Hoy secamos, estacionamos y envasamos nosotros mismos las cinco
-            yerbas de nuestro catálogo, tal como se hacía antes de que existieran las marcas.
+            En 1930, 72 agricultores cansados de los abusos de los intermediarios se asociaron
+            para comercializar su propia cosecha. Casi un siglo después, esa cooperativa sigue
+            en pie: elaboramos y envasamos nosotros mismos cada línea de nuestro catálogo.
           </p>
           <div className="hero-actions">
             <a href="#productos" className="btn btn-primary">
@@ -22,48 +57,22 @@ export default function Hero() {
           </div>
           <div className="hero-stats">
             <div>
-              <strong>60+</strong>
-              <span>familias asociadas</span>
+              <strong>500+</strong>
+              <span>socios cooperativistas</span>
             </div>
             <div>
-              <strong>5</strong>
-              <span>yerbas en catálogo</span>
+              <strong>4</strong>
+              <span>líneas de productos</span>
             </div>
             <div>
-              <strong>1958</strong>
+              <strong>1930</strong>
               <span>año de fundación</span>
             </div>
           </div>
         </div>
 
-        <div className="hero-art" aria-hidden="true">
-          <svg viewBox="0 0 320 360" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="160" cy="330" rx="120" ry="16" fill="#000" opacity="0.18" />
-            <path
-              d="M120 200c0-46 18-70 40-70s40 24 40 70v60c0 30-18 52-40 52s-40-22-40-52z"
-              fill="#2f3d26"
-              stroke="#c9a227"
-              strokeWidth="2.5"
-            />
-            <path d="M160 130c-6-18 4-32 22-36" fill="none" stroke="#c9a227" strokeWidth="4" strokeLinecap="round" />
-            <line x1="182" y1="94" x2="226" y2="58" stroke="#e2c467" strokeWidth="6" strokeLinecap="round" />
-            <circle cx="230" cy="54" r="7" fill="#e2c467" />
-            <g opacity="0.9">
-              <path
-                d="M70 96c22-30 40-6 30 22-24 8-46-2-30-22Z"
-                fill="#7c8b5c"
-                stroke="#c9a227"
-                strokeWidth="2"
-              />
-              <path
-                d="M250 150c24-24 46 4 32 30-26 4-46-10-32-30Z"
-                fill="#7c8b5c"
-                stroke="#c9a227"
-                strokeWidth="2"
-              />
-            </g>
-            <path d="M100 330h120" stroke="#c9a227" strokeWidth="3" opacity="0.5" />
-          </svg>
+        <div className="hero-art">
+          <HeroImage base="/assets/hero-banner" alt="Yerbal y producción de la Cooperativa Montecarlo" />
         </div>
       </div>
     </section>

@@ -47,8 +47,8 @@ export default function Header() {
             <path d="M32 50V16" stroke="#1F2A1A" strokeWidth="2" strokeLinecap="round" />
           </svg>
           <span>
-            <span className="brand-name">Montecarlo</span>
-            <span className="brand-sub">Cooperativa Agrícola Mixta</span>
+            <span className="brand-name">Montecarlos</span>
+            <span className="brand-sub">COOPERATIVA YERBATERA</span>
           </span>
         </a>
 
