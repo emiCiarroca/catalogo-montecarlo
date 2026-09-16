@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react'
+import { lineas } from '../data/products.js'
 
 const LINKS = [
   { id: 'historia', label: 'Historia' },
   { id: 'productos', label: 'Productos' },
   { id: 'contacto', label: 'Contacto' },
 ]
+
+const PRODUCT_LINKS = lineas.map((l) => ({ id: `producto-${l.id}`, label: l.name }))
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -47,8 +50,8 @@ export default function Header() {
             <path d="M32 50V16" stroke="#1F2A1A" strokeWidth="2" strokeLinecap="round" />
           </svg>
           <span>
-            <span className="brand-name">Montecarlos</span>
-            <span className="brand-sub">COOPERATIVA YERBATERA</span>
+            <span className="brand-name">Montecarlo</span>
+            <span className="brand-sub">COOPERATIVA AGRICOLA MIXTA</span>
           </span>
         </a>
 
@@ -68,16 +71,38 @@ export default function Header() {
         </button>
 
         <nav className={`navbar${open ? ' open' : ''}`}>
-          {LINKS.map((link) => (
-            <a
-              key={link.id}
-              href={`#${link.id}`}
-              className={`nav-link${active === link.id ? ' active' : ''}`}
-              onClick={handleLinkClick}
-            >
-              {link.label}
-            </a>
-          ))}
+          {LINKS.map((link) =>
+            link.id === 'productos' ? (
+              <div className="nav-item has-submenu" key={link.id}>
+                <a
+                  href={`#${link.id}`}
+                  className={`nav-link${active === link.id ? ' active' : ''}`}
+                  onClick={handleLinkClick}
+                >
+                  {link.label}
+                  <svg className="nav-caret" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
+                <div className="submenu">
+                  {PRODUCT_LINKS.map((p) => (
+                    <a key={p.id} href={`#${p.id}`} className="submenu-link" onClick={handleLinkClick}>
+                      {p.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                className={`nav-link${active === link.id ? ' active' : ''}`}
+                onClick={handleLinkClick}
+              >
+                {link.label}
+              </a>
+            )
+          )}
         </nav>
       </div>
     </header>

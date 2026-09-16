@@ -1,7 +1,3 @@
-// Catálogo real de la Cooperativa Agrícola Mixta de Montecarlo Limitada.
-// Las imágenes son links genéricos a /public/assets — reemplazar esos
-// archivos por las fotos reales manteniendo el mismo nombre de archivo
-// (ver src/components/Productos.jsx y public/assets/README.md).
 
 export const lineas = [
   {
@@ -9,14 +5,35 @@ export const lineas = [
     name: 'Aguantadora',
     tagline: 'Pasado y presente unidos por una misma pasión',
     description:
-      'Yerba Mate Aguantadora es nuestra línea insignia, elaborada con palo desde 1930. Está disponible en distintas variedades para adaptarse a todos los gustos: Tradicional (con bajo contenido de polvo), Suave (ideal para quienes buscan un sabor más delicado), Especial de Selección (con estacionamiento natural prolongado) y Despalada (90% a 95% de hoja, para un sabor más intenso y duradero).',
+      'Yerba Mate Aguantadora es nuestra línea insignia, elaborada con palo desde 1930. Libre de gluten y sin T.A.C.C.',
     badges: ['Libre de gluten', 'Sin T.A.C.C.'],
     fotosPendientes: false,
-    images: [
-      { src: '/assets/aguantadora-tradicional.jpg', caption: 'Tradicional' },
-      { src: '/assets/aguantadora-suave.jpg', caption: 'Suave' },
-      { src: '/assets/aguantadora-especial.jpg', caption: 'Selección Especial' },
-      { src: '/assets/aguantadora-despalada.jpg', caption: 'Despalada' },
+    variantes: [
+      {
+        name: 'Tradicional',
+        blurb: 'Bajo contenido de polvo: la yerba de siempre, la que tomaron los fundadores.',
+        image: '/assets/aguantadora-tradicional.jpg',
+      },
+      {
+        name: 'Suave',
+        blurb: 'Ideal para quienes buscan un sabor más delicado.',
+        image: '/assets/aguantadora-suave.jpg',
+      },
+      {
+        name: 'Selección Especial',
+        blurb: 'Estacionamiento natural prolongado, para un sabor más redondo.',
+        image: '/assets/aguantadora-especial.jpg',
+      },
+      {
+        name: 'Despalada',
+        blurb: '90% a 95% de hoja: sabor más intenso y duradero.',
+        image: '/assets/aguantadora-despalada.jpg',
+      },
+      {
+        name: 'Mate Frío',
+        blurb: 'Pensada especialmente para prepararse bien fría, en tereré.',
+        image: '/assets/aguantadora-mate-frio.jpg',
+      },
     ],
     presentaciones: [
       { producto: 'Aguantadora Tradicional', presentacion: '14x1/4', peso: '250 g' },
@@ -36,13 +53,30 @@ export const lineas = [
     name: 'Sinceridad',
     tagline: 'Una yerba mate suave y equilibrada',
     description:
-      'Yerba Mate Sinceridad está pensada para quienes gustan de un mate muy equilibrado. Además de su versión tradicional, cuenta con variedades saborizadas: Hierbas (mezcla de menta, poleo, peperina y manzanilla), Limón y Naranja, todas elaboradas con palo, libres de gluten y sin T.A.C.C.',
+      'Yerba Mate Sinceridad está pensada para quienes gustan de un mate muy equilibrado. Elaborada con palo, libre de gluten y sin T.A.C.C.',
     badges: ['Libre de gluten', 'Sin T.A.C.C.'],
     fotosPendientes: true,
-    images: [
-      { src: '/assets/sinceridad-tradicional.jpg', caption: 'Tradicional' },
-      { src: '/assets/sinceridad-hierbas.jpg', caption: 'Hierbas' },
-      { src: '/assets/sinceridad-limon-naranja.jpg', caption: 'Limón y Naranja' },
+    variantes: [
+      {
+        name: 'Tradicional',
+        blurb: 'Un mate muy equilibrado, para el día a día.',
+        image: '/assets/sinceridad-tradicional.jpg',
+      },
+      {
+        name: 'Hierbas',
+        blurb: 'Mezcla de menta, poleo, peperina y manzanilla.',
+        image: '/assets/sinceridad-hierbas.jpg',
+      },
+      {
+        name: 'Limón',
+        blurb: 'Con un toque cítrico de limón.',
+        image: '/assets/sinceridad-limon.jpg',
+      },
+      {
+        name: 'Naranja',
+        blurb: 'Con un toque cítrico de naranja.',
+        image: '/assets/sinceridad-naranja.jpg',
+      },
     ],
     presentaciones: [
       { producto: 'Sinceridad', presentacion: '14x1/4', peso: '250 g' },
@@ -60,13 +94,25 @@ export const lineas = [
     name: 'Pampa',
     tagline: 'Producto Premium, orgánico y tradicional',
     description:
-      'Yerba Mate Pampa es un producto Premium, cultivado y elaborado respetando los ritmos naturales de crecimiento. Está disponible en su versión Tradicional BCP (bajo contenido de polvo) y en dos blends orgánicos: Clásica e Intensa.',
+      'Yerba Mate Pampa es un producto Premium, cultivado y elaborado respetando los ritmos naturales de crecimiento.',
     badges: ['Premium', 'Línea orgánica'],
     fotosPendientes: true,
-    images: [
-      { src: '/assets/pampa-tradicional.jpg', caption: 'Tradicional BCP' },
-      { src: '/assets/pampa-organica-clasica.jpg', caption: 'Orgánica Clásica' },
-      { src: '/assets/pampa-organica-intensa.jpg', caption: 'Orgánica Intensa' },
+    variantes: [
+      {
+        name: 'Tradicional BCP',
+        blurb: 'Bajo contenido de polvo, elaboración tradicional.',
+        image: '/assets/pampa-tradicional.jpg',
+      },
+      {
+        name: 'Orgánica Clásica',
+        blurb: 'Blend orgánico de sabor clásico.',
+        image: '/assets/pampa-organica-clasica.jpg',
+      },
+      {
+        name: 'Orgánica Intensa',
+        blurb: 'Blend orgánico de sabor más intenso.',
+        image: '/assets/pampa-organica-intensa.jpg',
+      },
     ],
     presentaciones: [
       { producto: 'Pampa Tradicional BCP', presentacion: '10x1/2', peso: '500 g' },
@@ -79,13 +125,58 @@ export const lineas = [
     name: 'Fécula de Mandioca',
     tagline: 'Almidón natural para cocina libre de gluten',
     description:
-      'Nuestra fécula de mandioca, también conocida como tapioca, es un almidón extraído de la raíz de mandioca. De gelatinización rápida, no modifica el sabor ni el aroma de los alimentos, por lo que se utiliza como aglutinante en la elaboración de panificados, postres, dulces y aderezos, además de ser un ingrediente clave en la cocina libre de gluten.',
+      'Nuestra fécula de mandioca, también conocida como tapioca, es un almidón extraído de la raíz de mandioca. De gelatinización rápida, no modifica el sabor ni el aroma de los alimentos.',
     badges: ['Libre de gluten'],
     fotosPendientes: false,
-    images: [{ src: '/assets/fecula-mandioca.jpg', caption: 'Fécula de Mandioca' }],
+    variantes: [
+      {
+        name: 'Fécula de Mandioca',
+        blurb: 'Ideal como aglutinante en panificados, postres, dulces y aderezos.',
+        image: '/assets/fecula-mandioca.jpg',
+      },
+    ],
     presentaciones: [
       { producto: 'Fécula de Mandioca', presentacion: '1x25kg', peso: '25 kg' },
       { producto: 'Fécula de Mandioca', presentacion: '10x1kg', peso: '1 kg c/u' },
     ],
+  },
+  {
+    id: 'te-mate-cocido',
+    name: 'Té y Mate Cocido',
+    tagline: 'Práctico, en saquitos, para cualquier momento del día',
+    description:
+      'Desde Misiones, la Tierra del Oro Verde, pensamos estas infusiones en saquitos para acompañar tus jornadas donde no tengas mate y bombilla a mano: en la oficina, la facultad o de viaje.',
+    badges: [],
+    fotosPendientes: true,
+    variantes: [
+      {
+        name: 'Té Monte Carlo',
+        blurb: 'Desde Misiones, la Tierra del Oro Verde, una Yerba Mate única para acompañar tus jornadas.',
+        image: '/assets/te-monte-carlo.jpg',
+        tienda: 'https://www.tienda.montecarlo.com.ar/te-mate-cocido_qO30130452XtOcxSM',
+      },
+      {
+        name: 'Mate Cocido Aguantadora',
+        blurb: 'Desde Misiones, la Tierra del Oro Verde, una Yerba Mate única para acompañar tus jornadas.',
+        image: '/assets/mate-cocido-aguantadora.jpg',
+        tienda: 'https://tienda.montecarlo.com.ar/categoria-producto/mate-cocido/',
+        social: {
+          facebook: 'https://www.facebook.com/Aguantadora/',
+          instagram: 'https://www.instagram.com/aguantadora/',
+        },
+      },
+      {
+        name: 'Mate Cocido Pampa',
+        blurb: 'Desde Misiones, la Tierra del Oro Verde, una Yerba Mate única para acompañar tus jornadas.',
+        image: '/assets/mate-cocido-pampa.jpg',
+        tienda: 'https://tienda.montecarlo.com.ar/categoria-producto/mate-cocido/',
+        social: {
+          facebook: 'https://www.facebook.com/pampayerbamate/',
+          instagram: 'https://www.instagram.com/pampayerbamate/',
+        },
+      },
+    ],
+    presentaciones: [],
+    headLink: 'https://www.montecarlo.com.ar/web/teymatecocido/',
   },
 ]

@@ -3,9 +3,9 @@ import { useState } from 'react'
 export default function ProductImage({ src, alt, caption }) {
   const [failed, setFailed] = useState(false)
 
-  if (failed) {
-    return (
-      <figure className="carousel-figure">
+  return (
+    <figure className="media-figure">
+      {failed ? (
         <div className="img-placeholder">
           <svg viewBox="0 0 24 24" fill="none">
             <rect x="3" y="4" width="18" height="15" rx="2" stroke="currentColor" strokeWidth="1.5" />
@@ -15,14 +15,9 @@ export default function ProductImage({ src, alt, caption }) {
           <span>Falta agregar la foto</span>
           <code>{src}</code>
         </div>
-        {caption && <figcaption>{caption}</figcaption>}
-      </figure>
-    )
-  }
-
-  return (
-    <figure className="carousel-figure">
-      <img src={src} alt={alt} loading="lazy" onError={() => setFailed(true)} />
+      ) : (
+        <img src={src} alt={alt} loading="lazy" onError={() => setFailed(true)} />
+      )}
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
   )
