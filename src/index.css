@@ -187,22 +187,25 @@ section {
 }
 
 .brand-mark {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .brand-name {
-  font-weight: 500;
+  font-weight: 550;
+  font-size: 1.35rem;
 }
 
 .brand-sub {
   display: block;
   font-family: var(--font-body);
-  font-size: 0.62rem;
+  font-size: 0.75rem;
+  line-height: 1;
   letter-spacing: 0.14em;
   color: var(--gold-soft);
-  margin-top: 1px;
+  margin-top: -1px;
 }
 
 .navbar {
@@ -364,6 +367,7 @@ section {
 .hero-copy .eyebrow {
   display: inline-block;
   margin-bottom: 22px;
+  font-size: 1.3rem;
 }
 
 .hero-copy h1 {
@@ -408,7 +412,7 @@ section {
 }
 
 .hero-stats div span {
-  font-size: 0.82rem;
+  font-size: 0.99rem;
   color: var(--cream-faint);
 }
 
@@ -600,9 +604,16 @@ section {
   color: var(--cream-dim);
 }
 
+.producto-head-links {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .producto-head-link {
   display: inline-block;
-  margin-top: 16px;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--gold-soft);
@@ -613,16 +624,9 @@ section {
   color: var(--cream);
 }
 
-.variant-links {
-  margin-top: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
 .variant-shop-link {
+  display: inline-block;
+  margin-top: 14px;
   font-size: 0.84rem;
   font-weight: 600;
   color: var(--gold-soft);
@@ -633,14 +637,14 @@ section {
   color: var(--cream);
 }
 
-.variant-social {
+.social-icons {
   display: flex;
   gap: 8px;
 }
 
-.variant-social a {
-  width: 30px;
-  height: 30px;
+.social-icons a {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: 1px solid var(--line-strong);
   display: flex;
@@ -650,13 +654,13 @@ section {
   transition: border-color 0.3s var(--ease), color 0.3s var(--ease), transform 0.3s var(--ease);
 }
 
-.variant-social a:hover {
+.social-icons a:hover {
   border-color: var(--gold-soft);
   color: var(--gold-soft);
   transform: translateY(-2px);
 }
 
-.variant-social svg {
+.social-icons svg {
   width: 14px;
   height: 14px;
 }

@@ -8,6 +8,11 @@ export const lineas = [
       'Yerba Mate Aguantadora es nuestra línea insignia, elaborada con palo desde 1930. Libre de gluten y sin T.A.C.C.',
     badges: ['Libre de gluten', 'Sin T.A.C.C.'],
     fotosPendientes: false,
+    headLink: 'https://www.montecarlo.com.ar/web/yerba-mate/',
+    social: {
+      facebook: 'https://www.facebook.com/Aguantadora/',
+      instagram: 'https://www.instagram.com/aguantadora/',
+    },
     variantes: [
       {
         name: 'Tradicional',
@@ -56,6 +61,11 @@ export const lineas = [
       'Yerba Mate Sinceridad está pensada para quienes gustan de un mate muy equilibrado. Elaborada con palo, libre de gluten y sin T.A.C.C.',
     badges: ['Libre de gluten', 'Sin T.A.C.C.'],
     fotosPendientes: true,
+    headLink: 'https://www.montecarlo.com.ar/web/yerba-mate/',
+    social: {
+      facebook: 'https://www.facebook.com/YerbaMateSinceridad/',
+      instagram: 'https://www.instagram.com/sinceridadyerbamate/',
+    },
     variantes: [
       {
         name: 'Tradicional',
@@ -97,6 +107,11 @@ export const lineas = [
       'Yerba Mate Pampa es un producto Premium, cultivado y elaborado respetando los ritmos naturales de crecimiento.',
     badges: ['Premium', 'Línea orgánica'],
     fotosPendientes: true,
+    headLink: 'https://www.montecarlo.com.ar/web/yerba-mate/',
+    social: {
+      facebook: 'https://www.facebook.com/pampayerbamate/',
+      instagram: 'https://www.instagram.com/pampayerbamate/',
+    },
     variantes: [
       {
         name: 'Tradicional BCP',
@@ -128,6 +143,7 @@ export const lineas = [
       'Nuestra fécula de mandioca, también conocida como tapioca, es un almidón extraído de la raíz de mandioca. De gelatinización rápida, no modifica el sabor ni el aroma de los alimentos.',
     badges: ['Libre de gluten'],
     fotosPendientes: false,
+    headLink: 'https://www.montecarlo.com.ar/web/fecula-de-mandioca/',
     variantes: [
       {
         name: 'Fécula de Mandioca',
@@ -142,7 +158,7 @@ export const lineas = [
   },
   {
     id: 'te-mate-cocido',
-    name: 'Té y Mate Cocido',
+    name: 'Té y Mate Cocido en Saquitos',
     tagline: 'Práctico, en saquitos, para cualquier momento del día',
     description:
       'Desde Misiones, la Tierra del Oro Verde, pensamos estas infusiones en saquitos para acompañar tus jornadas donde no tengas mate y bombilla a mano: en la oficina, la facultad o de viaje.',
@@ -160,20 +176,12 @@ export const lineas = [
         blurb: 'Desde Misiones, la Tierra del Oro Verde, una Yerba Mate única para acompañar tus jornadas.',
         image: '/assets/mate-cocido-aguantadora.jpg',
         tienda: 'https://tienda.montecarlo.com.ar/categoria-producto/mate-cocido/',
-        social: {
-          facebook: 'https://www.facebook.com/Aguantadora/',
-          instagram: 'https://www.instagram.com/aguantadora/',
-        },
       },
       {
         name: 'Mate Cocido Pampa',
         blurb: 'Desde Misiones, la Tierra del Oro Verde, una Yerba Mate única para acompañar tus jornadas.',
         image: '/assets/mate-cocido-pampa.jpg',
         tienda: 'https://tienda.montecarlo.com.ar/categoria-producto/mate-cocido/',
-        social: {
-          facebook: 'https://www.facebook.com/pampayerbamate/',
-          instagram: 'https://www.instagram.com/pampayerbamate/',
-        },
       },
     ],
     presentaciones: [],

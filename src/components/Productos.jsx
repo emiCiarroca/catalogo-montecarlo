@@ -53,14 +53,31 @@ export default function Productos() {
               )}
 
               {linea.headLink && (
-                <a
-                  href={linea.headLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="producto-head-link"
-                >
-                  Ver la línea completa ↗
-                </a>
+                <div className="producto-head-links">
+                  <a
+                    href={linea.headLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="producto-head-link"
+                  >
+                    Ver en la web de la cooperativa ↗
+                  </a>
+
+                  {linea.social && (
+                    <div className="social-icons">
+                      {linea.social.facebook && (
+                        <a href={linea.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                          <SocialIcon kind="facebook" />
+                        </a>
+                      )}
+                      {linea.social.instagram && (
+                        <a href={linea.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                          <SocialIcon kind="instagram" />
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
               )}
             </div>
 
@@ -74,33 +91,15 @@ export default function Productos() {
                     <h4>{v.name}</h4>
                     <p>{v.blurb}</p>
 
-                    {(v.tienda || v.social) && (
-                      <div className="variant-links">
-                        {v.tienda && (
-                          <a
-                            href={v.tienda}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="variant-shop-link"
-                          >
-                            Ir a la tienda →
-                          </a>
-                        )}
-                        {v.social && (
-                          <div className="variant-social">
-                            {v.social.facebook && (
-                              <a href={v.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                                <SocialIcon kind="facebook" />
-                              </a>
-                            )}
-                            {v.social.instagram && (
-                              <a href={v.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                                <SocialIcon kind="instagram" />
-                              </a>
-                            )}
-                          </div>
-                        )}
-                      </div>
+                    {v.tienda && (
+                      <a
+                        href={v.tienda}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="variant-shop-link"
+                      >
+                        Ir a la tienda →
+                      </a>
                     )}
                   </div>
                 </div>
