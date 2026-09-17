@@ -106,7 +106,7 @@ export const lineas = [
     description:
       'Yerba Mate Pampa es un producto Premium, cultivado y elaborado respetando los ritmos naturales de crecimiento.',
     badges: ['Premium', 'Línea orgánica'],
-    fotosPendientes: true,
+    fotosPendientes: false,
     headLink: 'https://www.montecarlo.com.ar/web/yerba-mate/',
     social: {
       facebook: 'https://www.facebook.com/pampayerbamate/',
@@ -116,17 +116,17 @@ export const lineas = [
       {
         name: 'Tradicional BCP',
         blurb: 'Bajo contenido de polvo, elaboración tradicional.',
-        image: '/assets/pampa-tradicional.jpg',
+        image: '/assets/pampa-bcp.png',
       },
       {
         name: 'Orgánica Clásica',
         blurb: 'Blend orgánico de sabor clásico.',
-        image: '/assets/pampa-organica-clasica.jpg',
+        image: '/assets/pampa-organica.png',
       },
       {
         name: 'Orgánica Intensa',
         blurb: 'Blend orgánico de sabor más intenso.',
-        image: '/assets/pampa-organica-intensa.jpg',
+        image: '/assets/pampa-intensa.png',
       },
     ],
     presentaciones: [

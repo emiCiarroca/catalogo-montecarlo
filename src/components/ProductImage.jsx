@@ -1,10 +1,14 @@
 import { useState } from 'react'
 
-export default function ProductImage({ src, alt, caption }) {
+export default function ProductImage({ src, alt, caption, onClick }) {
   const [failed, setFailed] = useState(false)
+  const clickable = typeof onClick === 'function' && !failed
 
   return (
-    <figure className="media-figure">
+    <figure
+      className={`media-figure${clickable ? ' clickable' : ''}`}
+      onClick={clickable ? onClick : undefined}
+    >
       {failed ? (
         <div className="img-placeholder">
           <svg viewBox="0 0 24 24" fill="none">
@@ -18,7 +22,17 @@ export default function ProductImage({ src, alt, caption }) {
       ) : (
         <img src={src} alt={alt} loading="lazy" onError={() => setFailed(true)} />
       )}
+
       {caption && <figcaption>{caption}</figcaption>}
+
+      {clickable && (
+        <div className="zoom-hint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
+            <path d="M21 21l-4.3-4.3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+        </div>
+      )}
     </figure>
   )
 }

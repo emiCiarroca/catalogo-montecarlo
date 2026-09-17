@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { lineas } from '../data/products.js'
 import ProductImage from './ProductImage.jsx'
 import ScrollRow from './ScrollRow.jsx'
 import Reveal from './Reveal.jsx'
+import Lightbox from './Lightbox.jsx'
 
 function SocialIcon({ kind }) {
   if (kind === 'facebook') {
@@ -25,6 +27,8 @@ function SocialIcon({ kind }) {
 }
 
 export default function Productos() {
+  const [lightbox, setLightbox] = useState(null)
+
   return (
     <section id="productos" className="section-pad">
       <div className="container">
@@ -85,7 +89,13 @@ export default function Productos() {
               {linea.variantes.map((v) => (
                 <div className="variant-card" key={v.name}>
                   <div className="variant-photo">
-                    <ProductImage src={v.image} alt={`${linea.name} — ${v.name}`} />
+                    <ProductImage
+                      src={v.image}
+                      alt={`${linea.name} — ${v.name}`}
+                      onClick={() =>
+                        setLightbox({ src: v.image, alt: `${linea.name} — ${v.name}` })
+                      }
+                    />
                   </div>
                   <div className="variant-info">
                     <h4>{v.name}</h4>
@@ -135,6 +145,10 @@ export default function Productos() {
           </Reveal>
         ))}
       </div>
+
+      {lightbox && (
+        <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />
+      )}
     </section>
   )
 }
