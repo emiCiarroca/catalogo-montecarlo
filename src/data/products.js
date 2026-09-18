@@ -116,17 +116,17 @@ export const lineas = [
       {
         name: 'Tradicional BCP',
         blurb: 'Bajo contenido de polvo, elaboración tradicional.',
-        image: '/assets/pampa-bcp.png',
+        image: '/assets/pampa-bcp.webp',
       },
       {
         name: 'Orgánica Clásica',
         blurb: 'Blend orgánico de sabor clásico.',
-        image: '/assets/pampa-organica.png',
+        image: '/assets/pampa-organica.webp',
       },
       {
         name: 'Orgánica Intensa',
         blurb: 'Blend orgánico de sabor más intenso.',
-        image: '/assets/pampa-intensa.png',
+        image: '/assets/pampa-intensa.webp',
       },
     ],
     presentaciones: [
