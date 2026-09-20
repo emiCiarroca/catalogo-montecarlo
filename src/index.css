@@ -4,7 +4,7 @@
   --bg-1: #1f2a19;      /* fondo base de sección */
   --bg-2: #26331e;      /* fondo alterno */
   --bg-3: #2f3d26;      /* superficies / tarjetas */
-  --bg-3-hover: #384a2c;
+  --bg-3-hover: rgb(56, 74, 44);
 
   --cream: #f1ead9;     /* papel de envoltorio */
   --cream-dim: #cbc3a6;
@@ -47,7 +47,14 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg-1);
+  background-color: var(--bg-1);
+  background-image:
+    linear-gradient(rgba(31, 42, 25, 1.9), rgba(31, 42, 25, 0.9)),
+    url('/assets/fondo-yerba.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--cream);
   font-family: var(--font-body);
   font-size: 16px;
@@ -438,7 +445,7 @@ section {
 }
 
 .bg-alt {
-  background: var(--bg-2);
+  background: rgba(38, 51, 30, 0.7);
 }
 
 /* ---------- Historia ---------- */
@@ -485,7 +492,7 @@ section {
   height: 9px;
   border-radius: 50%;
   background: var(--gold);
-  box-shadow: 0 0 0 4px var(--bg-2);
+  box-shadow: 0 0 0 4px rgba(38, 51, 30, 0.7);
 }
 
 .timeline-year {
@@ -798,6 +805,12 @@ section {
     top: 16px;
     right: 16px;
   }
+
+  .lightbox-img {
+    width: min(90vw, 900px);
+    height: 85vh;
+    object-fit: cover;
+  }
 }
 
 .img-placeholder {
@@ -871,7 +884,7 @@ section {
   aspect-ratio: 4 / 3;
   border-radius: 6px;
   overflow: hidden;
-  background: var(--bg-3);
+  background: rgba(56, 74, 44, 0.25);
   border: 1px solid var(--line);
   transition: transform 0.4s var(--ease), border-color 0.4s var(--ease);
 }
@@ -1021,7 +1034,7 @@ section {
 /* ---------- Footer ---------- */
 
 .site-footer {
-  background: var(--bg-0);
+  background: rgba(22, 31, 15, 0.7);
   border-top: 1px solid var(--line);
   padding: 72px 0 28px;
 }
@@ -1173,6 +1186,15 @@ section {
 @media (max-width: 480px) {
   .container {
     padding: 0 20px;
+  }
+
+  .hero-media {
+    display: none;
+  }
+
+  .hero {
+    min-height: 0;
+    background: transparent;
   }
 
   .hero-content {
