@@ -17,7 +17,7 @@ export default function Footer() {
             </a>
             <p>
               Cooperativa Agrícola Mixta de Montecarlo Limitada, fundada el 24 de julio de 1930.
-              Elaboramos yerba mate y fécula de mandioca junto a más de 500 socios.
+              Elaboramos yerba mate y fécula de mandioca junto a más de 800 socios activos.
             </p>
           </div>
 
@@ -27,6 +27,7 @@ export default function Footer() {
               <li><a href="#top">Inicio</a></li>
               <li><a href="#historia">Historia</a></li>
               <li><a href="#productos">Productos</a></li>
+              <li><a href="#mayoristas">Mayoristas</a></li>
               <li><a href="#contacto">Contacto</a></li>
             </ul>
           </div>
@@ -54,7 +55,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>© {year} Cooperativa Agrícola Mixta de Montecarlo Limitada. Todos los derechos reservados.</span>
-          <span>Hecho por y para los productores asociados.</span>
+          <span>Envíos a todo el país.</span>
         </div>
       </div>
     </footer>

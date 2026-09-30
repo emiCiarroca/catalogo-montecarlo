@@ -24,6 +24,8 @@ function HeroImage({ base, alt }) {
     <img
       src={`${base}.${HERO_EXTENSIONS[attempt]}`}
       alt={alt}
+      fetchpriority="high"
+      decoding="async"
       onError={() => setAttempt((a) => a + 1)}
     />
   )
@@ -40,35 +42,35 @@ export default function Hero() {
       <div className="hero-content">
         <div className="container">
           <div className="hero-copy">
-            <span className="eyebrow">Cooperativa yerbatera · Montecarlo, Misiones</span>
+            <span className="eyebrow">Venta mayorista · Montecarlo, Misiones</span>
             <h1>
               La yerba se cultiva bajo <em>monte</em>, no en depósito.
             </h1>
             <p className="hero-lede">
               En 1930, 72 agricultores cansados de los abusos de los intermediarios se asociaron
-              para comercializar su propia cosecha. Casi un siglo después, esa cooperativa sigue
-              en pie: elaboramos y envasamos nosotros mismos cada línea de nuestro catálogo.
+              para comercializar su propia cosecha. Hoy abastecemos a kioscos, supermercados,
+              distribuidores y almacenes de todo el país, con atención directa desde origen.
             </p>
             <div className="hero-actions">
-              <a href="#productos" className="btn btn-primary">
-                Ver los productos
+              <a href="#mayoristas" className="btn btn-primary">
+                Solicitar cotización mayorista
               </a>
-              <a href="#historia" className="btn btn-ghost">
-                Conocer la historia
+              <a href="#productos" className="btn btn-ghost">
+                Ver catálogo
               </a>
             </div>
             <div className="hero-stats">
               <div>
-                <strong>500+</strong>
-                <span>socios cooperativistas</span>
+                <strong>800+</strong>
+                <span>socios productores</span>
               </div>
               <div>
                 <strong>5</strong>
                 <span>líneas de productos</span>
               </div>
               <div>
-                <strong>1930</strong>
-                <span>año de fundación</span>
+                <strong>100%</strong>
+                <span>envíos a todo el país</span>
               </div>
             </div>
           </div>

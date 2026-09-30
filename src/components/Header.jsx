@@ -5,6 +5,7 @@ import LogoMark from './LogoMark.jsx'
 const LINKS = [
   { id: 'historia', label: 'Historia' },
   { id: 'productos', label: 'Productos' },
+  { id: 'mayoristas', label: 'Mayoristas' },
   { id: 'contacto', label: 'Contacto' },
 ]
 

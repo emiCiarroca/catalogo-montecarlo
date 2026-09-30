@@ -5,6 +5,11 @@ import ScrollRow from './ScrollRow.jsx'
 import Reveal from './Reveal.jsx'
 import Lightbox from './Lightbox.jsx'
 
+function isBulk(peso) {
+  const match = /(\d+(?:\.\d+)?)\s*kg/i.exec(peso)
+  return Boolean(match) && parseFloat(match[1]) >= 2
+}
+
 function SocialIcon({ kind }) {
   if (kind === 'facebook') {
     return (
@@ -36,8 +41,9 @@ export default function Productos() {
           <span className="eyebrow">Catálogo</span>
           <h2>Nuestras líneas de productos</h2>
           <p>
-            Cinco líneas, más de veinte presentaciones. Deslizá de costado las variedades de
-            cada línea y consultá abajo el detalle completo de formatos disponibles.
+            Cinco líneas, más de veinte presentaciones — incluidos formatos de 2, 10 y hasta 25
+            kg, pensados para reventa. ¿Comprás para tu comercio? Consultá condiciones
+            mayoristas <a href="#mayoristas">acá abajo</a>.
           </p>
         </Reveal>
 
@@ -132,10 +138,13 @@ export default function Productos() {
                   </thead>
                   <tbody>
                     {linea.presentaciones.map((p, i) => (
-                      <tr key={i}>
+                      <tr key={i} className={isBulk(p.peso) ? 'fila-mayorista' : ''}>
                         <td>{p.producto}</td>
                         <td>{p.presentacion}</td>
-                        <td>{p.peso}</td>
+                        <td>
+                          {p.peso}
+                          {isBulk(p.peso) && <span className="tag-mayorista">Mayorista</span>}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
